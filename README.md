@@ -13,7 +13,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) API built using Go,
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/crud-api.git
+   git clone https://github.com/said7388/Golang-Mongodb-crud.git
    cd crud-api
    ```
 
