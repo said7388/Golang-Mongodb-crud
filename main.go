@@ -4,7 +4,6 @@ import (
 	"crud-api/db"
 	"crud-api/routes"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 
@@ -14,10 +13,7 @@ import (
 
 func main() {
 	// Load environment variables
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
-	}
+	godotenv.Load()
 
 	// Get PORT from .env
 	port := os.Getenv("PORT")
