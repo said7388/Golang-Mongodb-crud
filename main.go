@@ -5,6 +5,7 @@ import (
 	"crud-api/routes"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -29,6 +30,11 @@ func main() {
 
 	// Initialize Gin router
 	router := gin.Default()
+
+	// Entry point
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "Welcome to the Task API"})
+	})
 
 	// Register routes
 	routes.TaskRoutes(router)
