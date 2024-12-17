@@ -16,10 +16,7 @@ var TaskCollection *mongo.Collection
 
 func InitMongoDB() {
 	// Load environment variables
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
-	}
+	godotenv.Load()
 
 	// Get MongoDB URI and Database Name from .env
 	uri := os.Getenv("MONGODB_URI")
